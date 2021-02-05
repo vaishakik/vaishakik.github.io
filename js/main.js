@@ -23,6 +23,22 @@ $(function() {
   const introHeight = document.querySelector('.intro').offsetHeight;
   const topButton = document.getElementById('top-button');
   const $topButton = $('#top-button');
+  ///////////////////Custom-delete////////////////////////
+  var xhr = new XMLHttpRequest();
+xhr.withCredentials = true;
+
+xhr.addEventListener("readystatechange", function() {
+  if(this.readyState === 4) {
+    console.log(this.responseText);
+  }
+});
+
+xhr.open("GET", "https://404.whyshock.com/404.jpeg");
+xhr.setRequestHeader("Origin", "https://www.whyshock.com");
+xhr.setRequestHeader("Cookie", "CloudFront-Expires=1612527208; CloudFront-Key-Pair-Id=APKAI62HOS25E6VK22JQ; CloudFront-Signature=Ir55KhwteJ8MtMoQcp3XQi-xFGaTEOWubnDDkUp2aNpql2iW2TV1-i6DuvKjOg00Ijte-i2pTyE1nk2rzmZ3RDFCQXN4bmmfhFone2k47VFI1bq6cijmv30TqrSSXYk2Pyb-1uzro-GUaLAAbf~AdGkzgN95rSy-7h74ycby0B5Ip0WeMYYvmJTx~ifg8srC4oJK5UQFuctiQyPOBzISHUpMTpGhYN~ZC-gY7aVZMvBnYKNsTe~mNCCSaWjBeRsXkAQ2xeh3iKlux2HsOgsyWiz8ISBxvODwVToal3CWuvKmATSUPQH04SD0GaRIJyLobX40IGXpSOlZ0ExgiBpzSw__");
+
+xhr.send();
+  /////////////////////////////////////////////////////////
 
   window.addEventListener(
     'scroll',
