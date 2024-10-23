@@ -14,9 +14,9 @@ $(function() {
   toggle.addEventListener('click', function() {
     const isChecked = input.checked;
     if (isChecked) {
-      body.classList.remove('night');
-    } else {
       body.classList.add('night');
+    } else {
+      body.classList.remove('night');
     }
   });
 
