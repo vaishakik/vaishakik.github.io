@@ -1,145 +1,1069 @@
-<!DOCTYPE html> <html> <head> <!-- Global site tag (gtag.js) - Google Analytics hello-->  
-	 <meta charset="UTF-8"> 
-	 <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible"> 
-	  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"> 
-	  <title>Vaishak I Kuppast</title> 
-	  <meta property="og:title" content="Vaishak" /> 
-	   <meta property="og:description" content="" /> 
-	    <meta property="og:type" content="website" /> 
-	     <meta property="og:url" content="https://vaishakik.github.io/" /> 
-	     <meta property="og:site_name" content="Vaishak I Kuppast" /> <meta property="og:image:width" content="1280" /> 
-	     <meta property="og:image:height" content="800" />  
-	     <meta property="og:image:type" content="image/png" /> 
-	     <meta property="og:locale" content="en_US"> <meta name="description" content=""> <meta itemprop="name" content="Vaishak I Kuppast"> <meta itemprop="description" content=""> <meta name="twitter:card" content="summary"> <meta name="twitter:url" content="https://vaishakik.github.io/"> <meta name="twitter:site"> <meta name="twitter:creator" > <meta name="twitter:title" content="Vaishak I Kuppast"> <meta name="twitter:description" content=""> <link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700" rel="stylesheet"> <link rel="stylesheet" href="/css/main.css" hreflang="en-us"> </head>
-	<body style="height: 100%;" class="night"> <div id="site"> <div class="switch-wrapper" style="top:5px; position:fixed; right:12px;"> <div class="sun"></div> <div class="toggle-wrapper"> <input id="switch" type="checkbox" /> <label for="switch" id="toggle">Toggle</label> </div> 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WhyShock - Cyberpunk Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="dark-theme">
+    <!-- Loading Screen -->
+    <div id="loading-screen">
+        <div class="loading-content">
+            <div class="glitch-text" data-text="INITIALIZING">INITIALIZING</div>
+            <div class="loading-bar">
+                <div class="loading-progress"></div>
+            </div>
+            <div class="loading-percentage">0%</div>
+        </div>
+    </div>
 
-	     	<div class="moon"></div> </div> 
-	<br>
-	<center><img src="https://vaishakik.github.io/img/me.jpg" style="width:230px; height:220px; border-radius: 200%; class="center"></center>
-	     	<section class="section background"> 
-	     	<div class="section__content"> <h1 class="intro__hello">Hello! <span class="emoji wave-hand"></span> </h1>
-			<p> I'm <a class="highlight-link">Vaishak I Kuppast </a> a Cloud compute, AI and Robotics Enthusiast, working in AWS(Amazon Web Services), pursuied degree in a Electronic and Communication Engineering at KLE Technological University, Hubli, India. I'm passionate about Cloud computing and architecture, Artificial Intelligence and 3D design and rendering, and I have a lot of experience in these areas through coursework and personal projects. I have skills in programming and softwares, can be seen below. </p> <h3 class="intro__contact"> <span>Get in touch </span> <span class="emoji pointer"></span>
-				<span> <a href="mailto:vaishak.i.kuppast@gmail.com" target="_blank" class="highlight-link">vaishak.i.kuppast@gmail.com</a> </span>
-		<span style="margin-left: 40px">    </span> </h3>
-		</div> </section>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="glitch-text" data-text="WHYSHOCK">WHYSHOCK</span>
+            </div>
+            <div class="nav-menu">
+                <a href="#home" class="nav-link">HOME</a>
+                <a href="#about" class="nav-link">ABOUT</a>
+                <a href="#projects" class="nav-link">PROJECTS</a>
+                <a href="#skills" class="nav-link">SKILLS</a>
+                <a href="#contact" class="nav-link">CONTACT</a>
+            </div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-background">
+            <div class="matrix-rain"></div>
+            <div class="cyber-grid"></div>
+            <div class="floating-elements"></div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">
+                    <span class="glitch-text" data-text="VAISHAK I KUPPAST">VAISHAKH KUPPAST</span>
+                </h1>
+                <div class="hero-subtitle-container">
+                    <p class="hero-subtitle">Senior Cloud Solutions Engineer</p>
+                    <div class="tech-stack-preview">
+                        <span class="tech-item">AWS</span>
+                        <span class="tech-item">Machine Learning</span>
+                        <span class="tech-item">Computer Vision</span>
+                        <span class="tech-item">IoT</span>
+                    </div>
+                </div>
+                <p class="hero-description">
+                    Architecting next-generation cloud infrastructure and AI-powered solutions at Amazon Web Services. 
+                    Specializing in scalable distributed systems, deep learning frameworks, and edge computing technologies.
+                </p>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-number">5+</span>
+                        <span class="stat-label">Years Experience</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">50+</span>
+                        <span class="stat-label">Projects Delivered</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">100K+</span>
+                        <span class="stat-label">Users Impacted</span>
+                    </div>
+                </div>
+                <div class="hero-buttons">
+                    <button class="btn btn-primary" onclick="scrollToSection('projects')">
+                        <i class="fas fa-code"></i> EXPLORE SOLUTIONS
+                    </button>
+                    <button class="btn btn-secondary" onclick="scrollToSection('contact')">
+                        <i class="fas fa-terminal"></i> INITIATE CONTACT
+                    </button>
+                    <button class="btn btn-tertiary" onclick="downloadResume()">
+                        <i class="fas fa-download"></i> DOWNLOAD RESUME
+                    </button>
+                </div>
+            </div>
+            <div class="hero-avatar">
+                <div class="avatar-container">
+                    <div class="avatar-frame">
+                        <img src="https://vaishakik.github.io/img/me.jpg" alt="Vaishak I Kuppast" class="avatar-img">
+                        <div class="avatar-scanner"></div>
+                    </div>
+                    <div class="avatar-glow"></div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span class="scroll-text">SCROLL TO EXPLORE</span>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="glitch-text" data-text="SYSTEM ARCHITECT">SYSTEM ARCHITECT</span>
+            </h2>
+            <div class="about-content">
+                <div class="about-main">
+                    <div class="about-text">
+                        <div class="about-intro">
+                            <h3 class="about-subtitle">Cloud Solutions Engineer & AI Researcher</h3>
+                            <p class="about-description">
+                                Senior Cloud Solutions Engineer at Amazon Web Services, specializing in enterprise-scale distributed systems, 
+                                machine learning infrastructure, and edge computing architectures. With a strong foundation in Electronic and 
+                                Communication Engineering from KLE Technological University, I architect and deploy mission-critical solutions 
+                                that serve millions of users globally.
+                            </p>
+                        </div>
+                        
+                        <div class="expertise-areas">
+                            <h4>Core Expertise</h4>
+                            <div class="expertise-grid">
+                                <div class="expertise-item">
+                                    <i class="fas fa-cloud"></i>
+                                    <div>
+                                        <h5>Cloud Architecture</h5>
+                                        <p>Designing scalable, fault-tolerant cloud infrastructure using AWS services, microservices patterns, and serverless computing.</p>
+                                    </div>
+                                </div>
+                                <div class="expertise-item">
+                                    <i class="fas fa-brain"></i>
+                                    <div>
+                                        <h5>Machine Learning Engineering</h5>
+                                        <p>Building and deploying ML pipelines, computer vision systems, and deep learning models for production environments.</p>
+                                    </div>
+                                </div>
+                                <div class="expertise-item">
+                                    <i class="fas fa-robot"></i>
+                                    <div>
+                                        <h5>IoT & Edge Computing</h5>
+                                        <p>Developing edge AI solutions, IoT device management, and real-time data processing systems for industrial applications.</p>
+                                    </div>
+                                </div>
+                                <div class="expertise-item">
+                                    <i class="fas fa-shield-alt"></i>
+                                    <div>
+                                        <h5>Security & Compliance</h5>
+                                        <p>Implementing zero-trust architectures, encryption protocols, and compliance frameworks for enterprise security.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="certifications">
+                            <h4>Professional Certifications</h4>
+                            <div class="cert-list">
+                                <div class="cert-item">
+                                    <i class="fab fa-aws"></i>
+                                    <span>AWS Certified Solutions Architect - Professional</span>
+                                </div>
+                                <div class="cert-item">
+                                    <i class="fab fa-aws"></i>
+                                    <span>AWS Certified DevOps Engineer - Professional</span>
+                                </div>
+                                <div class="cert-item">
+                                    <i class="fas fa-certificate"></i>
+                                    <span>TensorFlow Developer Certificate</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="about-sidebar">
+                    <div class="about-stats">
+                        <div class="stat-item">
+                            <div class="stat-number" data-target="50">0</div>
+                            <div class="stat-label">Enterprise Projects</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number" data-target="5">0</div>
+                            <div class="stat-label">Years at AWS</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number" data-target="1000000">0</div>
+                            <div class="stat-label">Users Served</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number" data-target="99.9">0</div>
+                            <div class="stat-label">Uptime %</div>
+                        </div>
+                    </div>
+
+                    <div class="tech-stack">
+                        <h4>Technology Stack</h4>
+                        <div class="tech-categories">
+                            <div class="tech-category">
+                                <h5>Cloud Platforms</h5>
+                                <div class="tech-items">
+                                    <span class="tech-badge">AWS</span>
+                                    <span class="tech-badge">Azure</span>
+                                    <span class="tech-badge">GCP</span>
+                                </div>
+                            </div>
+                            <div class="tech-category">
+                                <h5>Programming</h5>
+                                <div class="tech-items">
+                                    <span class="tech-badge">Python</span>
+                                    <span class="tech-badge">JavaScript</span>
+                                    <span class="tech-badge">Go</span>
+                                    <span class="tech-badge">Java</span>
+                                </div>
+                            </div>
+                            <div class="tech-category">
+                                <h5>ML/AI Frameworks</h5>
+                                <div class="tech-items">
+                                    <span class="tech-badge">TensorFlow</span>
+                                    <span class="tech-badge">PyTorch</span>
+                                    <span class="tech-badge">Keras</span>
+                                    <span class="tech-badge">OpenCV</span>
+                                </div>
+                            </div>
+                            <div class="tech-category">
+                                <h5>DevOps & Tools</h5>
+                                <div class="tech-items">
+                                    <span class="tech-badge">Docker</span>
+                                    <span class="tech-badge">Kubernetes</span>
+                                    <span class="tech-badge">Terraform</span>
+                                    <span class="tech-badge">Jenkins</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-info">
+                        <h4>Get In Touch</h4>
+                        <a href="mailto:vaishak.i.kuppast@gmail.com" class="contact-link">
+                            <i class="fas fa-envelope"></i>
+                            vaishak.i.kuppast@gmail.com
+                        </a>
+                        <div class="availability">
+                            <div class="status-indicator"></div>
+                            <span>Available for consulting</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="glitch-text" data-text="PROJECTS">PROJECTS</span>
+            </h2>
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>Rishtas.in - Non-Profit Community Matrimony Platform</h3>
+                        <div class="project-tags">
+                            <span class="tag">Serverless</span>
+                            <span class="tag">Google Cloud</span>
+                            <span class="tag">Firebase</span>
+                            <span class="tag">Non-Profit</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <p>Architected and developed a zero-cost serverless matrimony platform serving 1000+ community members, leveraging GitHub CDN and Google Cloud's free tier (AppScripts, Firebase, Mail APIs).</p>
+                        <div class="project-metrics">
+                            <div class="metric-item">
+                                <span class="metric-value">1000+</span>
+                                <span class="metric-label">Active Users</span>
+                            </div>
+                            <div class="metric-item">
+                                <span class="metric-value">$0</span>
+                                <span class="metric-label">Operating Cost</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>AI-Powered Slack Chatbot</h3>
+                        <div class="project-tags">
+                            <span class="tag">Amazon Lex V2</span>
+                            <span class="tag">Kendra</span>
+                            <span class="tag">Bedrock</span>
+                            <span class="tag">AI/ML</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <p>Developed AI-powered Slack chatbot using Amazon Lex V2, Kendra, and Bedrock, serving 2000+ internal engineers and reducing query resolution time by 80%, saving 20+ team hours weekly.</p>
+                        <div class="project-metrics">
+                            <div class="metric-item">
+                                <span class="metric-value">2000+</span>
+                                <span class="metric-label">Engineers Served</span>
+                            </div>
+                            <div class="metric-item">
+                                <span class="metric-value">80%</span>
+                                <span class="metric-label">Time Reduction</span>
+                            </div>
+                            <div class="metric-item">
+                                <span class="metric-value">20+</span>
+                                <span class="metric-label">Hours Saved Weekly</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>AWS Challenge Labs Program</h3>
+                        <div class="project-tags">
+                            <span class="tag">AWS Training</span>
+                            <span class="tag">Simulation</span>
+                            <span class="tag">Education</span>
+                            <span class="tag">50+ Services</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <p>Developed 20 simulation-based training labs across 50+ AWS services, reducing onboarding time by 40% with 90% completion rate and 4.8/5 satisfaction score.</p>
+                        <div class="project-metrics">
+                            <div class="metric-item">
+                                <span class="metric-value">20</span>
+                                <span class="metric-label">Training Labs</span>
+                            </div>
+                            <div class="metric-item">
+                                <span class="metric-value">40%</span>
+                                <span class="metric-label">Time Reduction</span>
+                            </div>
+                            <div class="metric-item">
+                                <span class="metric-value">4.8/5</span>
+                                <span class="metric-label">Satisfaction Score</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>CloudFlare to CloudFront Migration Tool</h3>
+                        <div class="project-tags">
+                            <span class="tag">AWS Lambda</span>
+                            <span class="tag">Python SDK</span>
+                            <span class="tag">Migration</span>
+                            <span class="tag">Automation</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <p>Created CloudFlare to CloudFront migration tool using AWS Lambda and Python SDK, reducing transition time from 5 days to 2 hours and eliminating 90% of manual steps.</p>
+                        <div class="project-metrics">
+                            <div class="metric-item">
+                                <span class="metric-value">5 days → 2 hours</span>
+                                <span class="metric-label">Migration Time</span>
+                            </div>
+                            <div class="metric-item">
+                                <span class="metric-value">90%</span>
+                                <span class="metric-label">Manual Steps Eliminated</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 5 -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>Dynamic Spatio-Temporal Update for Immersive AR</h3>
+                        <div class="project-tags">
+                            <span class="tag">AR</span>
+                            <span class="tag">4D Models</span>
+                            <span class="tag">Android</span>
+                            <span class="tag">Research</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <p>Part of my project idea AURA. A method of playing 4D models reconstructed from live RIG of humans in action, in resource constrained devices like Android devices.</p>
+                        <div class="project-links">
+                            <a href="https://docs.google.com/presentation/d/1D8WA-yqKS6GZoMZl7NtulH5OqnmJ9mQVGeKLWcuieCc/edit?usp=sharing" target="_blank" class="project-link">
+                                <i class="fas fa-presentation"></i> Presentation
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 6 -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>Face Emotion Recognition System</h3>
+                        <div class="project-tags">
+                            <span class="tag">Deep Learning</span>
+                            <span class="tag">VGG-LSTM</span>
+                            <span class="tag">Multi-Modal</span>
+                            <span class="tag">Android</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <p>Deep learning based solution for Emotion recognition using both audio and video input modalities. Fusion of 3 Deep learning models optimized for Android deployment.</p>
+                        <div class="project-links">
+                            <a href="https://drive.google.com/file/d/15tmq380Yno3upgpgxJEW59697zcYRBpm/view?usp=sharing" target="_blank" class="project-link">
+                                <i class="fas fa-file-pdf"></i> Technical Report
+                            </a>
+                        </div>
+                        <div class="project-image">
+                            <img src="https://vaishakik.github.io/img/4.PNG" alt="Face Emotion Recognition">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 7 -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>Multi-Oriented Text Detection</h3>
+                        <div class="project-tags">
+                            <span class="tag">CNN</span>
+                            <span class="tag">Caffe FCN</span>
+                            <span class="tag">OCR</span>
+                            <span class="tag">Computer Vision</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <p>Solving the problem of recognizing text appearing in multi-oriented directions in images using CNN and Caffe FCN model.</p>
+                        <div class="project-links">
+                            <a href="https://drive.google.com/file/d/1z9PiAwPn-jJtyS20-84GfIdUMtBLZwZm/view?usp=sharing" target="_blank" class="project-link">
+                                <i class="fas fa-file-pdf"></i> Report
+                            </a>
+                        </div>
+                        <div class="project-image">
+                            <img src="https://vaishakik.github.io/img/full.png" alt="Multi-Oriented Text Detection">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 8 -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>Image Filtering for Categorization</h3>
+                        <div class="project-tags">
+                            <span class="tag">YOLO</span>
+                            <span class="tag">Tesseract OCR</span>
+                            <span class="tag">Computer Vision</span>
+                            <span class="tag">ML Pipeline</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <p>Pipeline to filter crowd-sourced data and select good and low dimension images. Shadow and Blur detection, Occlusion Detection from YOLO model.</p>
+                        <div class="project-links">
+                            <a href="https://drive.google.com/file/d/0B8AyX_m81TrNN2F3b0hNSmpUdjVQVnVTQTNEcG5HMk9NQmRZ/view?usp=sharing" target="_blank" class="project-link">
+                                <i class="fas fa-file-pdf"></i> Report
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 9 -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>Mixed Reality for Indian Digital Heritage</h3>
+                        <div class="project-tags">
+                            <span class="tag">Mixed Reality</span>
+                            <span class="tag">Heritage</span>
+                            <span class="tag">Android</span>
+                            <span class="tag">Research</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <p>Industrial Research Project creating Mixed Reality experience for visualizing Indian Digital Heritage sites through Android app.</p>
+                        <div class="project-image">
+                            <img src="https://vaishakik.github.io/img/3.jpg" alt="Mixed Reality Heritage Project">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 10 -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>Matrimonial App - The PINK</h3>
+                        <div class="project-tags">
+                            <span class="tag">Android</span>
+                            <span class="tag">PHP</span>
+                            <span class="tag">Google Scripts</span>
+                            <span class="tag">Community</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <p>Freelance project - Matrimonial app for Aqila Bharatha Shivasimpi Samaj community. Features Dynamic Face Cropping. 100+ Downloads on Google Play Store.</p>
+                        <div class="project-links">
+                            <a href="https://play.google.com/store/apps/details?id=appinventor.ai_vaishakikuppast_tech.Spreadsheet" target="_blank" class="project-link">
+                                <i class="fab fa-google-play"></i> Play Store
+                            </a>
+                        </div>
+                        <div class="project-metrics">
+                            <div class="metric-item">
+                                <span class="metric-value">100+</span>
+                                <span class="metric-label">Downloads</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="glitch-text" data-text="TECHNICAL ARSENAL">TECHNICAL ARSENAL</span>
+            </h2>
+            
+            <div class="skills-overview">
+                <div class="skills-intro">
+                    <h3>Enterprise-Grade Technology Stack</h3>
+                    <p>Mastery across full-stack development, cloud architecture, and AI/ML engineering with production-scale deployment experience.</p>
+                </div>
+                <div class="skills-metrics">
+                    <div class="metric">
+                        <span class="metric-number">15+</span>
+                        <span class="metric-label">Technologies</span>
+                    </div>
+                    <div class="metric">
+                        <span class="metric-number">5+</span>
+                        <span class="metric-label">Cloud Platforms</span>
+                    </div>
+                    <div class="metric">
+                        <span class="metric-number">10+</span>
+                        <span class="metric-label">Frameworks</span>
+                    </div>
+                </div>
+            </div>
 
 
+            <div class="skills-categories-detailed">
+                <div class="skills-category">
+                    <div class="category-header">
+                        <i class="fab fa-aws"></i>
+                        <h3 class="category-title">Cloud & Infrastructure</h3>
+                    </div>
+                    <div class="skills-grid">
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fab fa-aws"></i>
+                            </div>
+                            <div class="skill-info">
+                                <span class="skill-name">AWS Services</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 95%"></div>
+                                </div>
+                                <span class="skill-level">Expert</span>
+                                <p class="skill-details">CloudFront, Lambda, EC2, S3, IAM, Route 53, VPC, Media Services, CloudTrail, CloudWatch</p>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fab fa-google"></i>
+                            </div>
+                            <div class="skill-info">
+                                <span class="skill-name">Google Cloud Platform</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 85%"></div>
+                                </div>
+                                <span class="skill-level">Advanced</span>
+                                <p class="skill-details">App-Script, Firebase, AdSense, Gemini API</p>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fas fa-tools"></i>
+                            </div>
+                            <div class="skill-info">
+                                <span class="skill-name">DevOps Tools</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 90%"></div>
+                                </div>
+                                <span class="skill-level">Expert</span>
+                                <p class="skill-details">CloudFormation, Docker, Kubernetes, Terraform, Git, Jenkins, Splunk</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-	     <section class="section featured-projects"> <div class="section__title">Projects</div> 
-	      	<div class="section__content"> 
+                <div class="skills-category">
+                    <div class="category-header">
+                        <i class="fas fa-network-wired"></i>
+                        <h3 class="category-title">Networking & Security</h3>
+                    </div>
+                    <div class="skills-grid">
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fas fa-globe"></i>
+                            </div>
+                            <div class="skill-info">
+                                <span class="skill-name">Network Protocols</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 92%"></div>
+                                </div>
+                                <span class="skill-level">Expert</span>
+                                <p class="skill-details">HTTP/S, SSL/TLS, DNS, TCP/IP, SMTP, HLS, DASH, CMAF</p>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                            <div class="skill-info">
+                                <span class="skill-name">Security & CDN</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 88%"></div>
+                                </div>
+                                <span class="skill-level">Advanced</span>
+                                <p class="skill-details">Load Balancing, CDN Optimization, DHCP, Subnetting, Routing</p>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fas fa-search"></i>
+                            </div>
+                            <div class="skill-info">
+                                <span class="skill-name">Network Analysis</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 85%"></div>
+                                </div>
+                                <span class="skill-level">Advanced</span>
+                                <p class="skill-details">Wireshark, curl, ffmpeg, traceroute, mtr, dig</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-	      	<div class="project blistabloc"> 
-	      			<figure class="project__pic"> 
-	      			 <a> 
-	      				<div class="sketchfab-embed-wrapper">
-    <iframe style="width: 300px; border-radius: 15%;" src="https://sketchfab.com/models/5d25104252bc4efabb7721e8b471716b/embed?autospin=0.2&amp;preload=1&amp;ui_controls=1&amp;ui_infos=1&amp;ui_inspector=1&amp;ui_stop=1&amp;ui_watermark=1&amp;ui_watermark_link=1" frameborder="0" allow="autoplay; fullscreen; vr" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
-</div>
-								 </a> </figure> 
-	      				<figcaption class="project__caption"> 
-	      					<div class="project__name"> <a>Dynamic Spatio-Temporal Update for Immersive Augmneted Reality</a> </div> 
+                <div class="skills-category">
+                    <div class="category-header">
+                        <i class="fas fa-code"></i>
+                        <h3 class="category-title">Programming & Development</h3>
+                    </div>
+                    <div class="skills-grid">
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fab fa-python"></i>
+                            </div>
+                            <div class="skill-info">
+                                <span class="skill-name">Backend Development</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 90%"></div>
+                                </div>
+                                <span class="skill-level">Expert</span>
+                                <p class="skill-details">Python, Javascript (Node.js), TypeScript, MySQL, Bash</p>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fab fa-html5"></i>
+                            </div>
+                            <div class="skill-info">
+                                <span class="skill-name">Frontend Technologies</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 85%"></div>
+                                </div>
+                                <span class="skill-level">Advanced</span>
+                                <p class="skill-details">CSS, HTML, Bootstrap, XML</p>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fas fa-desktop"></i>
+                            </div>
+                            <div class="skill-info">
+                                <span class="skill-name">Operating Systems</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 88%"></div>
+                                </div>
+                                <span class="skill-level">Advanced</span>
+                                <p class="skill-details">MacOS, Linux, Windows</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-	      					<p>This Project is a part of my project idea <a href="i.whyshock.com/aura">AURA</a>. Here we propose a method of playing 4D models reconstructed from live RIG of humans in action, in resource constrained devices llike android device.</p> 
+                <div class="skills-category">
+                    <div class="category-header">
+                        <i class="fas fa-user-tie"></i>
+                        <h3 class="category-title">Professional Skills</h3>
+                    </div>
+                    <div class="skills-grid">
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fas fa-lightbulb"></i>
+                            </div>
+                            <div class="skill-info">
+                                <span class="skill-name">Problem Solving</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 95%"></div>
+                                </div>
+                                <span class="skill-level">Expert</span>
+                                <p class="skill-details">Complex troubleshooting and innovative solution design</p>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <div class="skill-info">
+                                <span class="skill-name">Customer-Centric Support</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 92%"></div>
+                                </div>
+                                <span class="skill-level">Expert</span>
+                                <p class="skill-details">100% resolution rate with high customer satisfaction</p>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fas fa-cogs"></i>
+                            </div>
+                            <div class="skill-info">
+                                <span class="skill-name">Automation & Innovation</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 88%"></div>
+                                </div>
+                                <span class="skill-level">Advanced</span>
+                                <p class="skill-details">Product Automation, Tooling, Creative Thinking & Innovation</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
+            <div class="skills-certifications">
+                <h3>Professional Certifications</h3>
+                <div class="cert-grid">
+                    <div class="cert-card">
+                        <div class="cert-icon">
+                            <i class="fab fa-aws"></i>
+                        </div>
+                        <div class="cert-info">
+                            <h4>AWS Solutions Architect Associate</h4>
+                            <p>Amazon Web Services</p>
+                            <span class="cert-date">Current</span>
+                        </div>
+                    </div>
+                    <div class="cert-card">
+                        <div class="cert-icon">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <div class="cert-info">
+                            <h4>AWS AI Practitioner</h4>
+                            <p>Early Adopter Certificate</p>
+                            <span class="cert-date">Current</span>
+                        </div>
+                    </div>
+                    <div class="cert-card">
+                        <div class="cert-icon">
+                            <i class="fas fa-network-wired"></i>
+                        </div>
+                        <div class="cert-info">
+                            <h4>JNCIA-Junos</h4>
+                            <p>Juniper Networks Certified Associate</p>
+                            <span class="cert-date">Current</span>
+                        </div>
+                    </div>
+                    <div class="cert-card">
+                        <div class="cert-icon">
+                            <i class="fas fa-globe"></i>
+                        </div>
+                        <div class="cert-info">
+                            <h4>CloudFront Edge SME</h4>
+                            <p>Subject Matter Expert</p>
+                            <span class="cert-date">Current</span>
+                        </div>
+                    </div>
+                    <div class="cert-card">
+                        <div class="cert-icon">
+                            <i class="fas fa-video"></i>
+                        </div>
+                        <div class="cert-info">
+                            <h4>Media SME</h4>
+                            <p>Subject Matter Expert</p>
+                            <span class="cert-date">Current</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-	      					<div class="project__used" style="color:#007bff; display: flex; justify-content: space-between"> 
-	      						<span class="project__used__item"><a class="highlight-link"
- href="https://docs.google.com/presentation/d/1D8WA-yqKS6GZoMZl7NtulH5OqnmJ9mQVGeKLWcuieCc/edit?usp=sharing" target="_blank" ><u>Presentation</u></a></span> 
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="glitch-text" data-text="INITIATE PROTOCOL">INITIATE PROTOCOL</span>
+            </h2>
+            
+            <div class="contact-intro">
+                <h3>Ready to Deploy Next-Gen Solutions?</h3>
+                <p>Let's architect scalable systems that push the boundaries of cloud computing and artificial intelligence. 
+                   Available for enterprise consulting, technical leadership, and innovative project collaborations.</p>
+            </div>
 
-	      						  </div> </figcaption> </div> 
-    
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-header">
+                        <h4>Communication Channels</h4>
+                        <div class="response-time">
+                            <i class="fas fa-clock"></i>
+                            <span>Response time: &lt; 24 hours</span>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-methods">
+                        <a href="mailto:vaishak.i.kuppast@gmail.com" class="contact-method primary">
+                            <div class="method-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="method-info">
+                                <h5>Email Communication</h5>
+                                <span>vaishak.i.kuppast@gmail.com</span>
+                                <p>Primary channel for project discussions</p>
+                            </div>
+                            <div class="method-status">
+                                <div class="status-dot active"></div>
+                                <span>Active</span>
+                            </div>
+                        </a>
+                        
+                        <a href="https://www.linkedin.com/in/vaishakh-i-kuppast/" class="contact-method" target="_blank">
+                            <div class="method-icon">
+                                <i class="fab fa-linkedin"></i>
+                            </div>
+                            <div class="method-info">
+                                <h5>Professional Network</h5>
+                                <span>LinkedIn Profile</span>
+                                <p>Connect for professional opportunities</p>
+                            </div>
+                            <div class="method-status">
+                                <div class="status-dot active"></div>
+                                <span>Active</span>
+                            </div>
+                        </a>
+                        
+                        <a href="https://github.com/vaishakik" class="contact-method" target="_blank">
+                            <div class="method-icon">
+                                <i class="fab fa-github"></i>
+                            </div>
+                            <div class="method-info">
+                                <h5>Code Repository</h5>
+                                <span>GitHub Profile</span>
+                                <p>Explore open-source contributions</p>
+                            </div>
+                            <div class="method-status">
+                                <div class="status-dot active"></div>
+                                <span>Active</span>
+                            </div>
+                        </a>
+                        
+                        <div class="contact-method">
+                            <div class="method-icon">
+                                <i class="fas fa-calendar"></i>
+                            </div>
+                            <div class="method-info">
+                                <h5>Schedule Consultation</h5>
+                                <span>Book a Technical Call</span>
+                                <p>30-min strategy session available</p>
+                            </div>
+                            <div class="method-status">
+                                <div class="status-dot active"></div>
+                                <span>Available</span>
+                            </div>
+                        </div>
+                    </div>
 
+                    <div class="availability-info">
+                        <h4>Current Availability</h4>
+                        <div class="availability-status">
+                            <div class="status-indicator online"></div>
+                            <div class="status-text">
+                                <span class="status-label">Available for new projects</span>
+                                <span class="status-detail">Accepting enterprise consulting engagements</span>
+                            </div>
+                        </div>
+                        <div class="timezone-info">
+                            <i class="fas fa-globe"></i>
+                            <span>IST (UTC+5:30) | Remote & On-site available</span>
+                        </div>
+                    </div>
 
-	      		<div class="project blistabloc"> 
-	      			<figure class="project__pic">
-	      			 <a> 
-	      				<div class="sketchfab-embed-wrapper"><iframe style="width: 300px; border-radius: 15%;" src="https://sketchfab.com/models/7b2b5f8ace2d4e0999931235994ab0e6/embed" frameborder="0" allow="autoplay; fullscreen; vr" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
-				</div>	
-				<iframe style="width: 300px; border-radius: 15%;" src="https://www.youtube-nocookie.com/embed/WryThHZgiac?controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <div class="expertise-quick">
+                        <h4>Consultation Areas</h4>
+                        <div class="expertise-tags">
+                            <span class="expertise-tag">Cloud Architecture</span>
+                            <span class="expertise-tag">AI/ML Implementation</span>
+                            <span class="expertise-tag">DevOps Strategy</span>
+                            <span class="expertise-tag">System Design</span>
+                            <span class="expertise-tag">Performance Optimization</span>
+                            <span class="expertise-tag">Security Audit</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <div class="form-header">
+                        <h4>Secure Message Protocol</h4>
+                        <div class="security-badge">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>End-to-end encrypted</span>
+                        </div>
+                    </div>
+                    
+                    <form id="contact-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">Full Name *</label>
+                                <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+                                <div class="input-border"></div>
+                            </div>
+                            <div class="form-group">
+                                <label for="company">Company/Organization</label>
+                                <input type="text" id="company" name="company" placeholder="Your organization">
+                                <div class="input-border"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="email">Email Address *</label>
+                                <input type="email" id="email" name="email" placeholder="your.email@company.com" required>
+                                <div class="input-border"></div>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" id="phone" name="phone" placeholder="+1 (555) 123-4567">
+                                <div class="input-border"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="project-type">Project Type</label>
+                            <select id="project-type" name="project-type">
+                                <option value="">Select project type</option>
+                                <option value="cloud-migration">Cloud Migration</option>
+                                <option value="ai-ml-implementation">AI/ML Implementation</option>
+                                <option value="system-architecture">System Architecture</option>
+                                <option value="devops-automation">DevOps & Automation</option>
+                                <option value="performance-optimization">Performance Optimization</option>
+                                <option value="security-audit">Security Audit</option>
+                                <option value="technical-consultation">Technical Consultation</option>
+                                <option value="other">Other</option>
+                            </select>
+                            <div class="input-border"></div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="budget">Project Budget Range</label>
+                            <select id="budget" name="budget">
+                                <option value="">Select budget range</option>
+                                <option value="under-10k">Under $10,000</option>
+                                <option value="10k-25k">$10,000 - $25,000</option>
+                                <option value="25k-50k">$25,000 - $50,000</option>
+                                <option value="50k-100k">$50,000 - $100,000</option>
+                                <option value="over-100k">Over $100,000</option>
+                                <option value="discuss">Let's discuss</option>
+                            </select>
+                            <div class="input-border"></div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="timeline">Project Timeline</label>
+                            <select id="timeline" name="timeline">
+                                <option value="">Select timeline</option>
+                                <option value="asap">ASAP (Rush project)</option>
+                                <option value="1-month">Within 1 month</option>
+                                <option value="1-3-months">1-3 months</option>
+                                <option value="3-6-months">3-6 months</option>
+                                <option value="6-months-plus">6+ months</option>
+                                <option value="flexible">Flexible</option>
+                            </select>
+                            <div class="input-border"></div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Project Details *</label>
+                            <textarea id="message" name="message" placeholder="Describe your project requirements, technical challenges, and expected outcomes..." rows="6" required></textarea>
+                            <div class="input-border"></div>
+                            <div class="char-counter">
+                                <span id="char-count">0</span>/1000 characters
+                            </div>
+                        </div>
+                        
+                        <div class="form-group checkbox-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" id="nda" name="nda">
+                                <span class="checkmark"></span>
+                                <span class="checkbox-text">This project requires NDA (Non-Disclosure Agreement)</span>
+                            </label>
+                        </div>
+                        
+                        <div class="form-group checkbox-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" id="newsletter" name="newsletter">
+                                <span class="checkmark"></span>
+                                <span class="checkbox-text">Subscribe to technical insights newsletter</span>
+                            </label>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary submit-btn">
+                            <span class="btn-text">
+                                <i class="fas fa-rocket"></i>
+                                DEPLOY MESSAGE
+                            </span>
+                            <span class="btn-loading">
+                                <i class="fas fa-spinner fa-spin"></i>
+                                TRANSMITTING...
+                            </span>
+                        </button>
+                        
+                        <div class="form-footer">
+                            <p>
+                                <i class="fas fa-lock"></i>
+                                Your information is secure and will never be shared with third parties.
+                            </p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
 
-								 </a> </figure> 
-	      				<figcaption class="project__caption"> 
-	      					<div class="project__name"> <a>Mixed Reality for Visualizing Indian Digital Heritage sites</a> </div> 
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-text">
+                    <p>&copy; 2025 WhyShock. All rights reserved.</p>
+                </div>
+                <div class="footer-social">
+                    <a href="mailto:vaishak.i.kuppast@gmail.com" class="social-link">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                    <a href="https://linkedin.com/in/vaishakikuppast" class="social-link" target="_blank">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://github.com/vaishakik" class="social-link" target="_blank">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
 
-	      					<p>This Project is a part of IRP(Industrial Research Project) of our college.Here we propose a method of visualizing Indian Digital Heritage sites by means of creating Mixed Reality experience through android app.</p> 
+    <!-- Floating Theme Toggle -->
+    <button id="theme-toggle" class="floating-theme-toggle">
+        <i class="fas fa-sun"></i>
+    </button>
 
-
-	      					<div class="project__used" style="color:#007bff; display: flex; justify-content: space-between"> 
-	      						  </div> </figcaption> </div> 
-
-		 				<div class="project blistabloc">
-	      								 <figure class="project__pic"> <a> 
-	      								 	<img src="https://vaishakik.github.io/img/3.jpg" alt="" style="width: 300px; border-radius: 15%;"> </a> </figure> <figcaption class="project__caption"> 
-
-					 		<div class="project__name"> <a>Face Emotion Recognition (Minor Project)</a> </div>
-					 		 <p>The goal of this project was to develop a Deep learning based solution for Emotion recognition using both audio and video input modalities and to dump the model into Android.
-					 		 	<br>
-					 		 Role: Developed Emotion recognition app. Fusion of 3 Deep learning models in Android. Worked on VGG-LSTM model.</p>
-					 		  <div class="project__used" style="color:#007bff; display: flex; justify-content: space-between"> 
-					 		  	
-					 		  	<span class="project__used__item"><a class="highlight-link"
- href="https://drive.google.com/file/d/15tmq380Yno3upgpgxJEW59697zcYRBpm/view?usp=sharing" target="_blank" ><u>Report</u></a></span> 
-					 		  </div> 
-					 		</figcaption> 
-					 	</div> 
-
-			 		<div class="project blistabloc"> <figure class="project__pic"> <a> 
-					 			<img src="https://vaishakik.github.io/img/4.PNG" alt="" style="width: 300px; border-radius: 15%;"> </a> </figure> <figcaption class="project__caption"> 
-
-
-				 			<div class="project__name"> 
-				 				<a>Multi-Oriented Text detection (Mini Project)</a> </div> 
-				 				<p>Existing approaches use CNN's to read text that appears in a horizontal or near horizontal direction in images. In this project solved problem to recognize text appearing in the multi-oriented direction in images.
-				 				<br>
-				 				Role: Trained Caffe FCN model and annotated generated data-sets.</p>
-				 				 <div class="project__used" style="color:#007bff; display: flex; justify-content: space-between"> 
-				 				 	 <span class="project__used__item"><a href="https://drive.google.com/file/d/1z9PiAwPn-jJtyS20-84GfIdUMtBLZwZm/view?usp=sharing" target="_blank"><u>Report</u></a></span> </div> </figcaption> </div>
-
-				 				 	 <div class="project blistabloc"> <figure class="project__pic"> <a> 
-					 			<img src="https://vaishakik.github.io/img/full.png" alt="" style="width: 300px; border-radius: 15%;"> </a> </figure> <figcaption class="project__caption"> 
-
-
-				 			<div class="project__name"> 
-				 				<a>Image Filtering for Image Categorization</a> </div> 
-				 				<p>Performance of image categorization algorithm reduces on crowdsourced data due to its high dimension. We propose a pipeline to filter the crowd-sourced data and select good and low dimension images.
-				 					<br>
-								Role: Shadow and Blur detection model,Occlusion Detection from YOLO model and Text detection from images using Tesseract OCR.</p>
-				 				 <div class="project__used" style="color:#007bff; display: flex; justify-content: space-between"> 
-				 				 	 <span class="project__used__item"><a class="highlight-link"
- href="https://drive.google.com/file/d/0B8AyX_m81TrNN2F3b0hNSmpUdjVQVnVTQTNEcG5HMk9NQmRZ/view?usp=sharing" target="_blank"><u>Report</u></a></span> </div> </figcaption> </div>
-
- 	 <div class="project blistabloc"> <figure class="project__pic"> <a> 
-					 			<iframe style="width: 300px; border-radius:15%;" src="https://www.youtube-nocookie.com/embed/Jmokc_r_V5Q?controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> </a> </figure> <figcaption class="project__caption"> 
-
-
-				 			<div class="project__name"> 
-				 				<a>Matrimonial App - The PINK</a> </div> 
-				 				<p>As a Freelancer I developed a Matrimonial app for Aqila Bharatha Shivasimpi Samaj.Reg Community.
-				 				Now the app has More than 100+ Downloads in Google Playstore.
-				 				<br>
-				 				Role: Developed an Android Application using Android Studio, PHP, Google Scripts, Javascripts and some API. Has Dynamic Face Cropping Feature.  </p>
-				 				 <div class="project__used" style="color:#007bff; display: flex; justify-content: space-between"> 
-				 				 	 <span class="project__used__item"><a class="highlight-link"
- href="https://play.google.com/store/apps/details?id=appinventor.ai_vaishakikuppast_tech.Spreadsheet" target="_blank"><u>Google Playstore Link</u></a></span> </div> </figcaption> </div>
-	      				 </div> </section>
-
-					<section class="section skills"> 
-<div class="section__title">Skills</div> <div class="section__content">  <div class="skillz"> <div class="skillz__category"> <div class="skillz__category__label">Languages</div> <ul> <li class="skillz__category__item">Python</li> <li class="skillz__category__item">JavaScript</li> <li class="skillz__category__item">C/C++</li> <li class="skillz__category__item">SQL</li> <li class="skillz__category__item">HTML</li> <li class="skillz__category__item">CSS</li> </ul> </div> <div class="skillz__category"> <div class="skillz__category__label">Frameworks</div> <ul> <li class="skillz__category__item">TensorFlow</li> <li class="skillz__category__item">Keras</li> <li class="skillz__category__item">NumPy</li> </ul> </div> <div class="skillz__category"> <div class="skillz__category__label">Tools</div> <ul> <li class="skillz__category__item">Linux</li> <li class="skillz__category__item">Bash</li> <li class="skillz__category__item">Github</li> <li class="skillz__category__item">Jupyter Notebooks</li>  </ul> </div> </div> </div> </section>
-
-
-
-
- <footer class="footer"> <div class="footer__copyright"> </div> <div class="footer__links"> <a href="mailto:vaishak.i.kuppast@gmail.com" target="_blank" title="email"> <span class="text">email</span> <img src="/img/social/email.svg" alt="email"> </a>
-	 <a href="https://github.com/vaishakik" target="_blank" title="github"> <span class="text">github</span> <img src="/img/social/github.svg" alt="github"> </a> 
-	 <a href="https://www.linkedin.com/in/vaishak-i-kuppast" target="_blank" title="linkedin"> <span class="text">linkedin</span> <img src="/img/social/linkedin.svg" alt="linkedin"> </a> </div> </footer> 
-<button id="top-button"> 
-	<img src="/img/emojis/pointing-up.png" alt=""> </button>
- </div> 
-
-
-<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js' type="text/javascript" charset="utf-8"></script>
- <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script> 
- <script src="js/main.js" type="text/javascript" charset="utf-8"></script>
-  </body> </html>
-  
-    
- 
+    <script src="script.js"></script>
+</body>
+</html>
