@@ -24,7 +24,11 @@ class BlogManager {
             const blogFiles = [
                 'sample-blog-1.txt',
                 'sample-blog-2.txt',
-                'sample-blog-3.txt'
+                'sample-blog-3.txt',
+                'genai-comic-strip-krishna.txt',
+                'gpt-transformers-explained.txt',
+                'parkinsons-law-vs-narayana-murthy.txt',
+                'teen-developer-newspaper-head',
             ];
 
             const posts = [];
