@@ -593,7 +593,7 @@ function downloadResume() {
     // Create a temporary link element
     const link = document.createElement('a');
     link.href = '#'; // Replace with actual resume URL
-    link.download = 'Vaishak_I_Kuppast_Resume.pdf';
+    link.download = 'show/Vaishakh I Kuppast Resume 3.pdf';
     
     // Show notification that resume download would start
     showNotification('Resume download would start here. Please add your actual resume URL.', 'info');
