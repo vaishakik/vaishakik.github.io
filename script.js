@@ -596,12 +596,12 @@ function downloadResume() {
     link.download = 'show/Vaishakh I Kuppast Resume 3.pdf';
     
     // Show notification that resume download would start
-    showNotification('Resume download would start here. Please add your actual resume URL.', 'info');
+    showNotification('Resume download would started', 'info');
     
     // Uncomment the following lines when you have an actual resume file
-    // document.body.appendChild(link);
-    // link.click();
-    // document.body.removeChild(link);
+     document.body.appendChild(link);
+     link.click();
+     document.body.removeChild(link);
 }
 
 // Console Easter Egg
