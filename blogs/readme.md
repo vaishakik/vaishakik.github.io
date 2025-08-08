@@ -216,57 +216,6 @@ def lambda_handler(event, context):
     }
 ```
 
-### Step-by-Step Instructions:
-
-1. **Open AWS Console**
-   - Navigate to the Lambda service
-   - Click "Create function"
-
-2. **Configure Function**
-   - Choose "Author from scratch"
-   - Enter function name: `hello-world-function`
-   - Select runtime: `Python 3.9`
-
-3. **Add Code**
-   - Paste the code above into the editor
-   - Click "Deploy"
-
-## Testing Your Function
-
-You can test your function directly in the AWS console:
-
-```json
-{
-  "key1": "value1",
-  "key2": "value2",
-  "key3": "value3"
-}
-```
-
-## Best Practices
-
-> **Important**: Always follow the principle of least privilege when setting up IAM roles for your Lambda functions.
-
-### Performance Tips:
-- Keep your deployment package small
-- Minimize cold start times
-- Use environment variables for configuration
-- Implement proper error handling
-
-## Conclusion
-
-AWS Lambda provides a powerful platform for building serverless applications. With its automatic scaling and pay-per-use pricing model, it's an excellent choice for many use cases.
-
-**Next Steps:**
-- Explore Lambda triggers (API Gateway, S3, etc.)
-- Learn about Lambda layers
-- Implement monitoring with CloudWatch
-
----
-
-*Have questions about AWS Lambda? Feel free to reach out in the comments below!*
-```
-
 ## Supported Languages for Syntax Highlighting
 
 The blog system supports syntax highlighting for many languages:
