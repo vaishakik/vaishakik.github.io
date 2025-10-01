@@ -1622,7 +1622,7 @@ section {
 }
 
 .contact-content {
-    display: grid;
+    padding: 3rem 0;   
     grid-template-columns: 1fr 1fr;
     gap: 8rem;
     align-items: start;
