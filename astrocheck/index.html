@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>✨ Celestial Match - Kundli Milan ✨</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Philosopher:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="stars"></div>
+    <div class="twinkling"></div>
+    <div class="constellation"></div>
+    
+    <div class="planets">
+        <div class="planet sun" title="Sun - सूर्य"></div>
+        <div class="planet moon" title="Moon - चन्द्र"></div>
+        <div class="planet mars" title="Mars - मंगल"></div>
+        <div class="planet mercury" title="Mercury - बुध"></div>
+        <div class="planet jupiter" title="Jupiter - गुरु"></div>
+        <div class="planet venus" title="Venus - शुक्र"></div>
+        <div class="planet saturn" title="Saturn - शनि"></div>
+    </div>
+
+    <div class="container">
+        <header>
+            <div class="logo">
+                <span class="logo-icon">☽</span>
+                <h1>Celestial Match</h1>
+                <span class="logo-icon">☾</span>
+            </div>
+            <p class="subtitle">दश कूट गुण मिलान - Dasa Koota Gun Milan</p>
+            <p class="tagline">Discover Your Cosmic Compatibility Through Ancient Vedic Wisdom</p>
+        </header>
+
+        <main>
+            <div class="input-section">
+                <div class="person-card bride">
+                    <div class="card-header">
+                        <span class="zodiac-symbol">♀</span>
+                        <h2>Bride (कन्या)</h2>
+                    </div>
+                    <div class="form-group">
+                        <label for="bride-rasi">
+                            <span class="label-icon">☉</span> Rashi (राशि)
+                        </label>
+                        <select id="bride-rasi" class="cosmic-select">
+                            <option value="">Select Rashi...</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="bride-nakshatra">
+                            <span class="label-icon">★</span> Nakshatra (नक्षत्र)
+                        </label>
+                        <select id="bride-nakshatra" class="cosmic-select">
+                            <option value="">Select Nakshatra...</option>
+                        </select>
+                    </div>
+                    <div class="selected-info" id="bride-info"></div>
+                </div>
+
+                <div class="divider">
+                    <div class="union-icon">⚭</div>
+                    <div class="connecting-line"></div>
+                </div>
+
+                <div class="person-card groom">
+                    <div class="card-header">
+                        <span class="zodiac-symbol">♂</span>
+                        <h2>Groom (वर)</h2>
+                    </div>
+                    <div class="form-group">
+                        <label for="groom-rasi">
+                            <span class="label-icon">☉</span> Rashi (राशि)
+                        </label>
+                        <select id="groom-rasi" class="cosmic-select">
+                            <option value="">Select Rashi...</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="groom-nakshatra">
+                            <span class="label-icon">★</span> Nakshatra (नक्षत्र)
+                        </label>
+                        <select id="groom-nakshatra" class="cosmic-select">
+                            <option value="">Select Nakshatra...</option>
+                        </select>
+                    </div>
+                    <div class="selected-info" id="groom-info"></div>
+                </div>
+            </div>
+
+            <button id="calculate-btn" class="calculate-btn">
+                <span class="btn-icon">☆</span>
+                <span>Calculate Compatibility</span>
+                <span class="btn-icon">☆</span>
+            </button>
+
+            <div id="results" class="results-section hidden">
+                <div class="results-header">
+                    <h2>✧ Compatibility Results ✧</h2>
+                    <div class="score-circle">
+                        <svg viewBox="0 0 100 100">
+                            <circle class="score-bg" cx="50" cy="50" r="45"></circle>
+                            <circle class="score-progress" cx="50" cy="50" r="45" id="score-circle"></circle>
+                        </svg>
+                        <div class="score-text">
+                            <span id="total-score">0</span>
+                            <span class="score-max">/36</span>
+                        </div>
+                    </div>
+                    <div id="compatibility-verdict" class="verdict"></div>
+                </div>
+
+                <div class="koota-grid">
+                    <div class="koota-item has-tooltip" data-koota="dina">
+                        <div class="koota-icon icon-sun">☉</div>
+                        <div class="koota-name">Dina Koota</div>
+                        <div class="koota-desc">Daily Harmony</div>
+                        <div class="koota-score"><span id="dina-score">0</span>/3</div>
+                        <div class="koota-bar"><div class="koota-fill" id="dina-bar"></div></div>
+                        <div class="koota-tooltip">Assesses day-to-day compatibility, health harmony, and mutual well-being. Good score = fewer daily conflicts.</div>
+                    </div>
+                    <div class="koota-item has-tooltip" data-koota="gana">
+                        <div class="koota-icon icon-gana">☯</div>
+                        <div class="koota-name">Gana Koota</div>
+                        <div class="koota-desc">Temperament</div>
+                        <div class="koota-score"><span id="gana-score">0</span>/4</div>
+                        <div class="koota-bar"><div class="koota-fill" id="gana-bar"></div></div>
+                        <div class="koota-tooltip">Evaluates temperament: Deva (divine), Nara (human), Rakshasa (demon). Same Gana = best compatibility.</div>
+                    </div>
+                    <div class="koota-item has-tooltip" data-koota="yoni">
+                        <div class="koota-icon icon-yoni">♌</div>
+                        <div class="koota-name">Yoni Koota</div>
+                        <div class="koota-desc">Physical Compatibility</div>
+                        <div class="koota-score"><span id="yoni-score">0</span>/4</div>
+                        <div class="koota-bar"><div class="koota-fill" id="yoni-bar"></div></div>
+                        <div class="koota-tooltip">Determines physical and intimate compatibility based on animal symbols. Enemy animals = 0 points.</div>
+                    </div>
+                    <div class="koota-item has-tooltip" data-koota="rasi">
+                        <div class="koota-icon icon-rasi">☽</div>
+                        <div class="koota-name">Rasi Koota</div>
+                        <div class="koota-desc">Moon Sign</div>
+                        <div class="koota-score"><span id="rasi-score">0</span>/7</div>
+                        <div class="koota-bar"><div class="koota-fill" id="rasi-bar"></div></div>
+                        <div class="koota-tooltip">Most important koota! Evaluates emotional compatibility based on Moon sign positions. Carries highest points.</div>
+                    </div>
+                    <div class="koota-item has-tooltip" data-koota="rasiadhipati">
+                        <div class="koota-icon icon-lord">♃</div>
+                        <div class="koota-name">Rasyadhipati</div>
+                        <div class="koota-desc">Planetary Lords</div>
+                        <div class="koota-score"><span id="rasiadhipati-score">0</span>/5</div>
+                        <div class="koota-bar"><div class="koota-fill" id="rasiadhipati-bar"></div></div>
+                        <div class="koota-tooltip">Examines relationship between planetary lords of Moon signs. Friendly lords = natural harmony.</div>
+                    </div>
+                    <div class="koota-item has-tooltip" data-koota="rajju">
+                        <div class="koota-icon icon-rajju">∞</div>
+                        <div class="koota-name">Rajju Koota</div>
+                        <div class="koota-desc">Longevity</div>
+                        <div class="koota-score"><span id="rajju-score">0</span>/5</div>
+                        <div class="koota-bar"><div class="koota-fill" id="rajju-bar"></div></div>
+                        <div class="koota-tooltip">Crucial for marriage longevity! Same Rajju (body part) = caution advised. Different Rajju = auspicious.</div>
+                    </div>
+                    <div class="koota-item has-tooltip" data-koota="vedha">
+                        <div class="koota-icon icon-vedha">⚔</div>
+                        <div class="koota-name">Vedha Koota</div>
+                        <div class="koota-desc">Affliction</div>
+                        <div class="koota-score"><span id="vedha-score">0</span>/2</div>
+                        <div class="koota-bar"><div class="koota-fill" id="vedha-bar"></div></div>
+                        <div class="koota-tooltip">Checks for nakshatra affliction pairs. Vedha dosha = obstacles in marriage. No Vedha = good.</div>
+                    </div>
+                    <div class="koota-item has-tooltip" data-koota="vasya">
+                        <div class="koota-icon icon-vasya">☊</div>
+                        <div class="koota-name">Vasya Koota</div>
+                        <div class="koota-desc">Mutual Control</div>
+                        <div class="koota-score"><span id="vasya-score">0</span>/2</div>
+                        <div class="koota-bar"><div class="koota-fill" id="vasya-bar"></div></div>
+                        <div class="koota-tooltip">Indicates magnetic attraction and influence between partners. Mutual Vasya = 2 points, One-sided = 1 point.</div>
+                    </div>
+                    <div class="koota-item has-tooltip" data-koota="mahendra">
+                        <div class="koota-icon icon-mahendra">✦</div>
+                        <div class="koota-name">Mahendra</div>
+                        <div class="koota-desc">Prosperity</div>
+                        <div class="koota-score"><span id="mahendra-score">0</span>/2</div>
+                        <div class="koota-bar"><div class="koota-fill" id="mahendra-bar"></div></div>
+                        <div class="koota-tooltip">Ensures family well-being, prosperity, and good progeny. Favorable positions = 2 points.</div>
+                    </div>
+                    <div class="koota-item has-tooltip" data-koota="streedeergha">
+                        <div class="koota-icon icon-stree">♀</div>
+                        <div class="koota-name">Stree Deergha</div>
+                        <div class="koota-desc">Woman's Fortune</div>
+                        <div class="koota-score"><span id="streedeergha-score">0</span>/2</div>
+                        <div class="koota-bar"><div class="koota-fill" id="streedeergha-bar"></div></div>
+                        <div class="koota-tooltip">Looks at bride's welfare and happiness. Girl's nakshatra should be 9+ positions ahead of boy's.</div>
+                    </div>
+                </div>
+
+                <div class="interpretation" id="interpretation">
+                    <h3>☙ Detailed Interpretation ❧</h3>
+                    <div id="interpretation-text"></div>
+                </div>
+
+                <div class="action-buttons">
+                    <button id="print-btn" class="action-btn print-btn">
+                        <span class="action-icon">⎙</span>
+                        <span>Print Report</span>
+                    </button>
+                    <button id="reset-btn" class="action-btn reset-btn">
+                        <span class="action-icon">↺</span>
+                        <span>New Calculation</span>
+                    </button>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <div class="zodiac-band">
+                <span>♈</span><span>♉</span><span>♊</span><span>♋</span><span>♌</span><span>♍</span>
+                <span>♎</span><span>♏</span><span>♐</span><span>♑</span><span>♒</span><span>♓</span>
+            </div>
+            <p>Based on Traditional Vedic Astrology • दश कूट प्रणाली</p>
+        </footer>
+    </div>
+
+    <script src="cosmic-engine.js?v=11"></script>
+    <script src="app.js?v=11"></script>
+</body>
+</html>
