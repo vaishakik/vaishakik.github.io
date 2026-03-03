@@ -273,6 +273,181 @@ h1 {
     font-style: italic;
 }
 
+/* ===== INFO ACCORDION ===== */
+.info-accordion {
+    max-width: 800px;
+    margin: 0 auto 30px;
+}
+
+.accordion-toggle {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 15px 25px;
+    font-family: 'Cinzel', serif;
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: var(--celestial-blue);
+    background: linear-gradient(135deg, rgba(76, 201, 240, 0.1), rgba(157, 78, 221, 0.1));
+    border: 1px solid rgba(76, 201, 240, 0.4);
+    border-radius: 15px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.accordion-toggle:hover {
+    background: linear-gradient(135deg, rgba(76, 201, 240, 0.2), rgba(157, 78, 221, 0.2));
+    border-color: var(--celestial-blue);
+}
+
+.toggle-icon {
+    font-size: 1.3rem;
+}
+
+.toggle-arrow {
+    font-size: 0.9rem;
+    transition: transform 0.3s ease;
+}
+
+.accordion-toggle.active .toggle-arrow {
+    transform: rotate(180deg);
+}
+
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out;
+}
+
+.accordion-content.expanded {
+    max-height: 2000px;
+    transition: max-height 0.7s ease-in;
+}
+
+.info-card {
+    background: linear-gradient(135deg, rgba(26, 26, 62, 0.95), rgba(13, 27, 42, 0.95));
+    border: 1px solid rgba(76, 201, 240, 0.3);
+    border-top: none;
+    border-radius: 0 0 15px 15px;
+    padding: 25px;
+    margin-top: -10px;
+}
+
+.info-card h3 {
+    color: var(--star-gold);
+    font-family: 'Cinzel', serif;
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.info-card h4 {
+    color: var(--celestial-blue);
+    font-size: 1.1rem;
+    margin: 20px 0 10px;
+}
+
+.info-card p {
+    line-height: 1.7;
+    margin-bottom: 12px;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.info-card ul {
+    margin-left: 20px;
+    margin-bottom: 15px;
+}
+
+.info-card li {
+    line-height: 1.8;
+    color: rgba(255, 255, 255, 0.85);
+    margin-bottom: 5px;
+}
+
+.score-guide {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
+    margin: 15px 0;
+}
+
+.score-item {
+    padding: 10px 15px;
+    border-radius: 8px;
+    font-weight: 500;
+    text-align: center;
+}
+
+.score-item.excellent {
+    background: rgba(74, 222, 128, 0.2);
+    color: #4ade80;
+    border: 1px solid rgba(74, 222, 128, 0.4);
+}
+
+.score-item.good {
+    background: rgba(76, 201, 240, 0.2);
+    color: #4cc9f0;
+    border: 1px solid rgba(76, 201, 240, 0.4);
+}
+
+.score-item.moderate {
+    background: rgba(251, 191, 36, 0.2);
+    color: #fbbf24;
+    border: 1px solid rgba(251, 191, 36, 0.4);
+}
+
+.score-item.caution {
+    background: rgba(248, 113, 113, 0.2);
+    color: #f87171;
+    border: 1px solid rgba(248, 113, 113, 0.4);
+}
+
+.info-footer {
+    text-align: center;
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    font-style: italic;
+    color: var(--star-gold) !important;
+}
+
+/* Koota Explanations in Info Section */
+.koota-explain {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 15px;
+    margin: 20px 0;
+}
+
+.koota-explain-item {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 215, 0, 0.2);
+    border-radius: 12px;
+    padding: 15px;
+    transition: all 0.3s ease;
+}
+
+.koota-explain-item:hover {
+    border-color: rgba(255, 215, 0, 0.5);
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.koota-explain-item strong {
+    color: var(--star-gold);
+    font-size: 1rem;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.koota-explain-item p {
+    margin: 0 !important;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.85);
+}
+
 /* ===== INPUT SECTION ===== */
 .input-section {
     display: flex;
@@ -409,6 +584,62 @@ h1 {
     text-align: center;
 }
 
+/* Mangal Dosha Checkbox */
+.mangal-dosha-check {
+    margin-top: 15px;
+    padding: 10px;
+    background: rgba(255, 99, 71, 0.1);
+    border: 1px solid rgba(255, 99, 71, 0.3);
+    border-radius: 8px;
+}
+
+.mangal-label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    font-size: 0.95rem;
+}
+
+.mangal-checkbox {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 22px;
+    height: 22px;
+    border: 2px solid rgba(255, 99, 71, 0.5);
+    border-radius: 5px;
+    background: rgba(10, 10, 26, 0.8);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.mangal-checkbox:checked {
+    background: #ff6347;
+    border-color: #ff6347;
+}
+
+.mangal-checkbox:checked::after {
+    content: '✓';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.mangal-checkbox:hover {
+    border-color: #ff6347;
+    box-shadow: 0 0 10px rgba(255, 99, 71, 0.4);
+}
+
+.mangal-text {
+    color: #ff6347;
+    font-weight: 500;
+}
+
 /* ===== DIVIDER ===== */
 .divider {
     display: flex;
@@ -470,6 +701,29 @@ h1 {
 
 .calculate-btn:active {
     transform: translateY(0);
+}
+
+/* Mangal Dosha Button */
+.mangal-btn {
+    display: inline-block;
+    padding: 12px 30px;
+    font-family: 'Cinzel', serif;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #fff;
+    background: linear-gradient(135deg, rgba(255, 99, 71, 0.3), rgba(255, 69, 0, 0.4));
+    border: 1px solid rgba(255, 99, 71, 0.6);
+    border-radius: 30px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 3px 15px rgba(255, 99, 71, 0.2);
+}
+
+.mangal-btn:hover {
+    background: linear-gradient(135deg, rgba(255, 99, 71, 0.5), rgba(255, 69, 0, 0.6));
+    border-color: #ff6347;
+    box-shadow: 0 5px 25px rgba(255, 99, 71, 0.4);
+    transform: translateY(-2px);
 }
 
 .btn-icon {

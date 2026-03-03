@@ -8,13 +8,14 @@ document.addEventListener('DOMContentLoaded', function() {
     setupEventListeners();
     addGradientDef();
     setupActionButtons();
+    setupInfoAccordion();
 });
 
-// Hindi names for Rashis
-const RASHI_HINDI = {
-    'Mesha': 'मेष', 'Vrishaba': 'वृषभ', 'Mithuna': 'मिथुन', 'Karka': 'कर्क',
-    'Simha': 'सिंह', 'Kanya': 'कन्या', 'Tula': 'तुला', 'Vrischika': 'वृश्चिक',
-    'Dhanu': 'धनु', 'Makara': 'मकर', 'Kumbha': 'कुम्भ', 'Meena': 'मीन'
+// English zodiac names for Rashis
+const RASHI_ENGLISH = {
+    'Mesha': 'Aries', 'Vrishaba': 'Taurus', 'Mithuna': 'Gemini', 'Karka': 'Cancer',
+    'Simha': 'Leo', 'Kanya': 'Virgo', 'Tula': 'Libra', 'Vrischika': 'Scorpio',
+    'Dhanu': 'Sagittarius', 'Makara': 'Capricorn', 'Kumbha': 'Aquarius', 'Meena': 'Pisces'
 };
 
 // Koota descriptions with significance
@@ -123,7 +124,7 @@ function initializeDropdowns() {
         CE.rashi.forEach((rashi, index) => {
             const option = document.createElement('option');
             option.value = index + 1;
-            option.textContent = `${CE.symbols[index]} ${rashi} (${RASHI_HINDI[rashi]})`;
+            option.textContent = `${CE.symbols[index]} ${rashi} (${RASHI_ENGLISH[rashi]})`;
             rashiSelect.appendChild(option);
         });
     });
@@ -216,7 +217,7 @@ function updateInfo(person) {
         
         infoDiv.innerHTML = `
             <div style="text-align: left; width: 100%; font-size: 0.85rem;">
-                <div>🌙 <strong>${rashi}</strong> (${RASHI_HINDI[rashi]})</div>
+                <div>🌙 <strong>${rashi}</strong> (${RASHI_ENGLISH[rashi]})</div>
                 <div>⭐ <strong>${nakshatra}</strong></div>
                 <div>👤 Gana: <strong>${gana}</strong></div>
                 <div>🦁 Yoni: <strong>${yoni.animal}</strong> (${yoni.sex === 'M' ? 'Male' : 'Female'})</div>
@@ -375,8 +376,8 @@ function generateInterpretation(results, brideRashi, brideNakshatra, groomRashi,
     let html = `
         <p style="font-size: 1.1rem; margin-bottom: 20px;">
             <span class="highlight">📊 Match Summary:</span><br>
-            <strong>Bride:</strong> ${brideNakshatraName} nakshatra in ${brideRashiName} (${RASHI_HINDI[brideRashiName]}) rashi<br>
-            <strong>Groom:</strong> ${groomNakshatraName} nakshatra in ${groomRashiName} (${RASHI_HINDI[groomRashiName]}) rashi<br>
+            <strong>Bride:</strong> ${brideNakshatraName} nakshatra in ${brideRashiName} (${RASHI_ENGLISH[brideRashiName]}) rashi<br>
+            <strong>Groom:</strong> ${groomNakshatraName} nakshatra in ${groomRashiName} (${RASHI_ENGLISH[groomRashiName]}) rashi<br>
             <strong>Total Score:</strong> ${results.total}/36 points (${results.percentage.toFixed(1)}%)
         </p>
         
@@ -489,33 +490,83 @@ function getKootaSpecificInterpretation(koota, score, brideN, groomN, brideR, gr
 function getRecommendation(verdict, score, results) {
     let text = '';
     
+    // Opening based on overall verdict
     switch(verdict) {
         case 'Excellent':
-            text = `With a score of ${score}/36, this is a highly auspicious match! The stars strongly favor this union. Both partners show excellent compatibility across most parameters. This marriage is likely to be blessed with harmony, mutual understanding, and lasting happiness.`;
+            text = `With a score of ${score}/36 (${((score/36)*100).toFixed(0)}%), this is a highly auspicious match!`;
             break;
         case 'Very Good':
-            text = `Scoring ${score}/36 indicates a very favorable match. The cosmic alignment supports this union with strong compatibility in major areas. While minor adjustments may be needed in some aspects, the overall outlook for this marriage is very positive.`;
+            text = `With a score of ${score}/36 (${((score/36)*100).toFixed(0)}%), this is a very favorable match.`;
             break;
         case 'Good':
-            text = `A score of ${score}/36 represents good compatibility. The couple shares positive energy in several important aspects. With mutual understanding, respect, and effort, this union can flourish into a successful and happy marriage.`;
+            text = `With a score of ${score}/36 (${((score/36)*100).toFixed(0)}%), this is a good match.`;
             break;
         case 'Moderate':
-            text = `With ${score}/36 points, this match shows moderate compatibility. While some areas need attention, remember that many successful marriages have similar scores. Focus on the positive aspects and work together on areas that need improvement. Consider consulting a qualified astrologer for remedial measures.`;
+            text = `With a score of ${score}/36 (${((score/36)*100).toFixed(0)}%), this match shows moderate compatibility.`;
             break;
         default:
-            text = `The score of ${score}/36 suggests that careful consideration is advised. This doesn't mean the marriage cannot work - it indicates areas that may need extra attention and effort. We strongly recommend consulting with a qualified Vedic astrologer for detailed analysis and appropriate remedies.`;
+            text = `With a score of ${score}/36 (${((score/36)*100).toFixed(0)}%), careful consideration is advised.`;
     }
-    
-    // Add specific warnings if any major koota has 0 points
-    const warnings = [];
-    if (results.rajju === 0) warnings.push('Rajju dosha (same Rajju)');
-    if (results.vedha === 0) warnings.push('Vedha dosha');
-    if (results.yoni === 0) warnings.push('Yoni incompatibility');
-    
-    if (warnings.length > 0) {
-        text += ` <br><br><strong>⚠ Points to address:</strong> ${warnings.join(', ')}. These specific doshas should be evaluated by a learned astrologer who can suggest appropriate remedial measures.`;
+
+    // Strengths section
+    const strengths = [];
+    if (results.rasi === 7) strengths.push('excellent emotional/mental compatibility (Rasi 7/7)');
+    else if (results.rasi >= 5) strengths.push('good emotional compatibility (Rasi ' + results.rasi + '/7)');
+    if (results.rasiadhipati === 5) strengths.push('planetary lords are very harmonious (Rasyadhipati 5/5)');
+    else if (results.rasiadhipati >= 4) strengths.push('favorable planetary lord relationship');
+    if (results.rajju === 5) strengths.push('different Rajju ensures marital longevity');
+    if (results.vedha === 2) strengths.push('no nakshatra affliction (Vedha free)');
+    if (results.gana === 4) strengths.push('same temperament (Gana 4/4)');
+    else if (results.gana === 2) strengths.push('compatible temperaments');
+    if (results.dina === 3) strengths.push('good daily harmony');
+    if (results.yoni >= 3) strengths.push('good physical compatibility');
+    if (results.vasya === 2) strengths.push('mutual attraction (Vasya 2/2)');
+    if (results.mahendra === 2) strengths.push('favorable for prosperity and progeny');
+    if (results.streedeergha === 2) strengths.push('auspicious for bride\'s welfare');
+
+    if (strengths.length > 0) {
+        text += `<br><br><strong>✓ Strengths:</strong> ${strengths.join(', ')}.`;
     }
-    
+
+    // Areas of concern
+    const concerns = [];
+    if (results.rasi === 0) concerns.push('challenging rashi position (may need extra effort in emotional understanding)');
+    if (results.rasiadhipati <= 1) concerns.push('planetary lords are not naturally harmonious');
+    if (results.rajju === 0) concerns.push('same Rajju body part (traditional caution advised)');
+    if (results.vedha === 0) concerns.push('Vedha dosha present between nakshatras');
+    if (results.gana === 0) concerns.push('different temperaments (Deva-Rakshasa)');
+    if (results.dina === 0) concerns.push('daily routine compatibility needs attention');
+    if (results.yoni === 0) concerns.push('yoni compatibility challenge');
+    if (results.vasya === 0) concerns.push('no natural vasya attraction');
+    if (results.mahendra === 0) concerns.push('Mahendra not favorable');
+    if (results.streedeergha === 0) concerns.push('Stree Deergha needs consideration');
+
+    if (concerns.length > 0) {
+        text += `<br><br><strong>△ Areas to consider:</strong> ${concerns.join(', ')}.`;
+    }
+
+    // Specific doshas that need remedies
+    const doshas = [];
+    if (results.rajju === 0) doshas.push('Rajju Dosha');
+    if (results.vedha === 0) doshas.push('Vedha Dosha');
+    if (results.gana === 0) doshas.push('Gana Dosha');
+
+    if (doshas.length > 0) {
+        text += `<br><br><strong>⚠ Doshas detected:</strong> ${doshas.join(', ')}. It is recommended to consult a qualified Vedic astrologer for specific remedial measures (parihara) such as puja, mantra, or gemstone recommendations.`;
+    }
+
+    // Final advice based on score
+    text += '<br><br>';
+    if (score >= 26) {
+        text += '<strong>Overall:</strong> The stars strongly favor this union. Proceed with confidence!';
+    } else if (score >= 21) {
+        text += '<strong>Overall:</strong> This is a compatible match. Minor challenges can be addressed with mutual understanding.';
+    } else if (score >= 18) {
+        text += '<strong>Overall:</strong> This match has both positive aspects and areas needing attention. With conscious effort from both partners, this can be a successful union.';
+    } else {
+        text += '<strong>Overall:</strong> This match requires careful consideration. It\'s advisable to perform additional matching methods and consult an experienced astrologer before proceeding.';
+    }
+
     return text;
 }
 
@@ -534,6 +585,21 @@ function addGradientDef() {
             </linearGradient>
         `;
         svg.insertBefore(defs, svg.firstChild);
+    }
+}
+
+/**
+ * Setup info accordion toggle
+ */
+function setupInfoAccordion() {
+    const toggle = document.getElementById('info-toggle');
+    const content = document.getElementById('info-content');
+    
+    if (toggle && content) {
+        toggle.addEventListener('click', function() {
+            toggle.classList.toggle('active');
+            content.classList.toggle('expanded');
+        });
     }
 }
 
@@ -579,8 +645,8 @@ function printReport() {
     printInfo.innerHTML = `
         <div style="text-align: center; padding: 20px; background: #f8f8f8; border-radius: 10px; margin-bottom: 20px; display: none;">
             <h2 style="margin-bottom: 15px; color: #333;">Dasa Koota Gun Milan Report</h2>
-            <p style="margin-bottom: 10px;"><strong>Bride:</strong> ${brideNakshatraName} nakshatra in ${brideRashiName} (${RASHI_HINDI[brideRashiName]})</p>
-            <p style="margin-bottom: 10px;"><strong>Groom:</strong> ${groomNakshatraName} nakshatra in ${groomRashiName} (${RASHI_HINDI[groomRashiName]})</p>
+            <p style="margin-bottom: 10px;"><strong>Bride:</strong> ${brideNakshatraName} nakshatra in ${brideRashiName} (${RASHI_ENGLISH[brideRashiName]})</p>
+            <p style="margin-bottom: 10px;"><strong>Groom:</strong> ${groomNakshatraName} nakshatra in ${groomRashiName} (${RASHI_ENGLISH[groomRashiName]})</p>
             <p style="font-size: 0.9em; color: #666;">Generated on: ${new Date().toLocaleDateString('en-IN', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })}</p>
         </div>
     `;

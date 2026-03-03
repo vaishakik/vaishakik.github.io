@@ -36,6 +36,94 @@
         </header>
 
         <main>
+            <!-- Expandable Info Section -->
+            <div class="info-accordion">
+                <button class="accordion-toggle" id="info-toggle">
+                    <span class="toggle-icon">❓</span>
+                    <span>Why is Dasa Koota matching important?</span>
+                    <span class="toggle-arrow">▼</span>
+                </button>
+                <div class="accordion-content" id="info-content">
+                    <div class="info-card">
+                        <h3>🌟 The Science of Kundli Milan</h3>
+                        <p>Kundli Milan (कुंडली मिलान), also known as <strong>Dasa Koota Gun Milan</strong>, is an ancient Vedic astrology system used to assess the compatibility between a prospective bride and groom before marriage. This 36-point matching system has been practiced for thousands of years in Indian tradition.</p>
+                        
+                        <h4>📊 The 10 Kootas Explained</h4>
+                        <p>Each Koota evaluates a different aspect of married life:</p>
+                        
+                        <div class="koota-explain">
+                            <div class="koota-explain-item">
+                                <strong>☽ Rasi Koota (7 points)</strong>
+                                <p>Evaluates emotional and mental compatibility based on Moon signs. The most important koota as it determines how well partners will understand each other's feelings, thoughts, and emotional needs.</p>
+                            </div>
+                            <div class="koota-explain-item">
+                                <strong>♃ Rasyadhipati (5 points)</strong>
+                                <p>Examines friendship between planetary lords of both Rashis. When lords are friends, partners naturally support each other's growth. Enemy lords may cause friction in decision-making and life goals.</p>
+                            </div>
+                            <div class="koota-explain-item">
+                                <strong>∞ Rajju Koota (5 points)</strong>
+                                <p>Critical for longevity! Rajju classifies nakshatras into body parts (head, neck, stomach, thigh, foot). Same Rajju may affect that body part's health or indicate widowhood. Different Rajju ensures protection.</p>
+                            </div>
+                            <div class="koota-explain-item">
+                                <strong>☯ Gana Koota (4 points)</strong>
+                                <p>Assesses temperament: <em>Deva</em> (gentle, cultured), <em>Nara</em> (balanced), <em>Rakshasa</em> (dominating). Same Gana means similar values and approaches to life. Deva-Rakshasa combination needs extra effort.</p>
+                            </div>
+                            <div class="koota-explain-item">
+                                <strong>♌ Yoni Koota (4 points)</strong>
+                                <p>Determines physical and intimate compatibility through animal symbols. Each nakshatra has a male or female animal. Compatible animals ensure physical harmony; enemy animals (like Snake-Mongoose) may create challenges.</p>
+                            </div>
+                            <div class="koota-explain-item">
+                                <strong>☉ Dina Koota (3 points)</strong>
+                                <p>Indicates day-to-day harmony, health compatibility, and mutual well-being. A good Dina score suggests fewer daily conflicts, better health synchronization, and smoother routine life together.</p>
+                            </div>
+                            <div class="koota-explain-item">
+                                <strong>⚔ Vedha (2 points)</strong>
+                                <p>Checks for nakshatra "affliction pairs" that traditionally cause obstacles. Vedha dosha is considered serious - these specific combinations are believed to bring sorrows and problems in married life.</p>
+                            </div>
+                            <div class="koota-explain-item">
+                                <strong>☊ Vasya (2 points)</strong>
+                                <p>Measures magnetic attraction and influence. Good Vasya ensures partners are naturally drawn to each other and willing to compromise. It determines who holds more influence in the relationship.</p>
+                            </div>
+                            <div class="koota-explain-item">
+                                <strong>✦ Mahendra (2 points)</strong>
+                                <p>Ensures family prosperity, wealth accumulation, and good progeny. Favorable Mahendra promotes happiness in family life and ensures continuation of lineage through healthy children.</p>
+                            </div>
+                            <div class="koota-explain-item">
+                                <strong>♀ Stree Deergha (2 points)</strong>
+                                <p>Specifically looks at the bride's welfare and longevity. A favorable score indicates the wife will enjoy a comfortable, respected, and happy life after marriage.</p>
+                            </div>
+                        </div>
+                        
+                        <h4>🎯 Score Interpretation</h4>
+                        <div class="score-guide">
+                            <div class="score-item excellent">26+ points: Excellent Match ✓</div>
+                            <div class="score-item good">21-25 points: Very Good Match ✓</div>
+                            <div class="score-item moderate">18-20 points: Good Match (Acceptable)</div>
+                            <div class="score-item caution">Below 18: Needs Careful Consideration</div>
+                        </div>
+                        
+                        <h4>⚠️ Important Doshas</h4>
+                        <p>Some combinations indicate specific <strong>doshas</strong> (afflictions) that traditionally require remedial measures:</p>
+                        <ul>
+                            <li><strong>Rajju Dosha</strong> - Same Rajju position (affects longevity)</li>
+                            <li><strong>Vedha Dosha</strong> - Certain nakshatra pairs that cause obstacles</li>
+                            <li><strong>Gana Dosha</strong> - Incompatible temperaments (Deva-Rakshasa)</li>
+                        </ul>
+                        
+                        <h4>💡 Modern Perspective</h4>
+                        <p>While Kundli matching provides valuable insights into potential compatibility areas, remember that:</p>
+                        <ul>
+                            <li>Scores are guidelines, not absolute verdicts</li>
+                            <li>Many successful marriages have moderate scores</li>
+                            <li>Love, mutual respect, and communication are equally important</li>
+                            <li>Remedies and conscious effort can address most doshas</li>
+                        </ul>
+                        
+                        <p class="info-footer">🙏 Use this calculator as a tool for self-awareness and discussion, not as the sole decision-maker.</p>
+                    </div>
+                </div>
+            </div>
+
             <div class="input-section">
                 <div class="person-card bride">
                     <div class="card-header">
@@ -96,6 +184,12 @@
                 <span>Calculate Compatibility</span>
                 <span class="btn-icon">☆</span>
             </button>
+
+            <div style="text-align: center; margin-top: 20px;">
+                <a href="mangal-dosha.html" class="mangal-btn">
+                    🔥 Check Mangal Dosha →
+                </a>
+            </div>
 
             <div id="results" class="results-section hidden">
                 <div class="results-header">
@@ -223,7 +317,7 @@
         </footer>
     </div>
 
-    <script src="cosmic-engine.js?v=11"></script>
-    <script src="app.js?v=11"></script>
+    <script src="cosmic-engine.js?v=19"></script>
+    <script src="app.js?v=19"></script>
 </body>
 </html>
